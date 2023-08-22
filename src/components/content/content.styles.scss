@@ -156,14 +156,14 @@
     @include devices(tablet){
         margin-top: 4vh;
         font-size: 1.7rem;
-        &::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             width: 10px;
           }
     }
     @include devices(desktop){
         font-size: 1.3rem;
         height: 25vh;
-        &::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             width: 10px;
           }
     }

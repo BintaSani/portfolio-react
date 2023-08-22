@@ -99,6 +99,7 @@
       width: 30%;
     }
     @include devices(4k){
+      margin-top: 0;
       width: 30%;
     }
 
