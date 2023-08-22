@@ -1,0 +1,76 @@
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media  (min-width: 320px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == phone {
+    @media (min-width: 390px) {
+      @content;
+      
+    }
+  }
+    @if $breakpoint == landscape {    
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == thone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+    @if $breakpoint == tablet {    
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == desktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+    @if $breakpoint == bigDesktop {    
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == giant {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+
+
+.home-page-container{
+    padding: 10px;
+
+    
+}   
+
+.content-container{
+    width: 90%;
+    height: 81vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    background-color: grey;
+
+
+    border: none;
+    padding-left: 1vh;
+    box-shadow: 0 4px 4px -4px blue;
+
+    
+    @include devices(landscape){
+        height: 90vh;
+    }
+    
+}

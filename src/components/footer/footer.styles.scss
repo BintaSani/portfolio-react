@@ -1,0 +1,198 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media  (min-width: 300px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == phone {
+    @media (min-width: 360px) {
+      @content;
+      
+    }
+  }
+    @if $breakpoint == landscape {    
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == thone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+    @if $breakpoint == tablet {    
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+    @if $breakpoint == bigDesktop {    
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == giant {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+
+
+.footer-Container{
+    width: 40%;
+    height: 6vh;
+    background-color: black;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1.5vh;
+
+    @include devices(tiny){
+        height: 6vh;
+        width: 35%;
+        padding-top: 0.5vh;
+    }
+    @include devices(phone){
+        height: 6vh;
+        width: 35%;
+        padding-top: 1.4vh;
+    }
+    @include devices(landscape){
+        height: 6vh;
+        width: 35%;
+        padding-top: 1.6vh;
+    }
+    @include devices(thone){
+        width: 50%;
+        padding: 1vh;
+        justify-content: space-evenly;
+    }
+    @include devices(tablet){
+        margin-top: 1vh;
+        width: 30%;
+    }
+    @include devices(desktop){
+      width: 15%;
+      padding-left: 30;
+      padding-right: 0;
+      padding-top: 1.6vh;
+      margin-top: 0;
+    }
+    @include devices(bigDesktop){
+      width: 15%;
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+}
+
+
+.mail1 {
+    margin-top: -0.6vh;
+    @include devices(tiny){
+        margin-top: 0;
+    }
+    @include devices(phone){
+        
+    }
+    
+    @include devices(landscape){
+        
+    }
+    @include devices(thone){
+        margin-top: 0;
+        padding-left: 0;
+    }
+    @include devices(desktop){
+      margin-top: -0.3vh;
+  }
+}
+.icon {
+    cursor: pointer;
+    .svg{
+        @include devices(tiny){
+            height: 10px;
+            width: 10px;
+        }
+        @include devices(phone){
+            height: 16px;
+            width: 16px;
+        }
+        @include devices(landscape){
+            height: 18px;
+            width: 18px;
+        }
+
+        @include devices(thone){
+            height: 25px;
+            width: 25px;
+            
+        }
+        @include devices(tablet){
+            height: 30px;
+            width: 30px;
+        }
+        @include devices(desktop){
+          height: 17px;
+          width: 17px;
+      }
+    }
+    .svg1{
+        @include devices(tiny){
+            height: 16px;
+            width: 16px;
+        }
+        @include devices(phone){
+            height: 20px;
+            width: 20px;
+        }
+        @include devices(landscape){
+            height: 23px;
+            width: 23px;
+        }
+        @include devices(thone){
+            height: 35px;
+            width: 35px;
+            
+        }
+        @include devices(tablet){
+            height: 40px;
+            width: 40px;
+        }
+        @include devices(desktop){
+          height: 25px;
+          width: 25px;
+      }
+    }
+    
+    .svg:hover{
+       
+        fill: grey;
+        stroke: grey;
+        
+        
+    }
+}
+.git{
+    @include devices(tiny){
+        margin-top: 0.3vh;
+    }
+    @include devices(thone){
+        margin-top: 0.3vh;
+    }
+}

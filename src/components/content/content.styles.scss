@@ -1,0 +1,334 @@
+
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media  (min-width: 320px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == phone {
+    @media (min-width: 360px) {
+      @content;
+      
+    }
+  }
+    @if $breakpoint == landscape {    
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+    @if $breakpoint == surface {    
+    @media (min-width: 540px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == thone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+    @if $breakpoint == tablet {    
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+    @if $breakpoint == bigDesktop {    
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == giant {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 4k {
+    @media (min-width: 1840px) {
+      @content;
+    }
+  }
+}
+
+.container {
+    width: 75%;
+    position: absolute;
+    top: 16vh;
+    left: 12.5%;
+    text-align: center;
+
+    @include devices(desktop){
+        display: flex;
+    }
+    @include devices(4k){
+        display: flex;
+      }
+    
+}
+.content{
+    @include devices(desktop){
+        width: 90%;
+    }
+    
+}
+
+.introduction {
+    font-size: 2rem;
+
+    @include devices(tiny){
+        font-size: 1rem;
+    }
+    @include devices(phone){
+        font-size: 1.5rem;
+    }
+    @include devices(landscape){
+        font-size: 2rem;
+    }
+    @include devices(thone){
+        font-size: 2rem;
+    }
+    @include devices(tablet){
+        font-size: 2.1rem;
+    }
+    @include devices(desktop){
+        font-size: 2rem;
+    }
+    @include devices(4k){
+        font-size: 2rem;
+      }
+}
+.developer{
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    @include devices(tiny){
+        font-size: 0.8rem;
+    }
+    @include devices(phone){
+        font-size: 1.1rem;
+    }
+    @include devices(landscape){
+        font-size: 1.5rem;
+    }
+    @include devices(thone){
+        font-size: 1.8rem;
+    }
+    @include devices(tablet){
+        font-size: 1.9rem;
+    }
+    @include devices(desktop){
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+}
+.dev{
+    font-size: 1rem;
+    text-align: justify;
+    height: 26vh;
+    overflow-y: scroll;
+
+    @include devices (tiny){
+        height: 30vh;
+        font-size: 0.7rem;
+    }
+    @include devices (phone){
+        height: 30vh;
+        font-size: 1rem;
+    }
+    @include devices(landscape){
+        font-size: 1rem;
+        height: 30vh;
+    }
+    @include devices(thone){
+        font-size: 1.5rem;
+        height: 33vh;
+        margin-bottom: 2vh;
+    }
+    @include devices(tablet){
+        margin-top: 4vh;
+        font-size: 1.7rem;
+    }
+    @include devices(desktop){
+        font-size: 1.3rem;
+        height: 25vh;
+    }
+}
+.container-m{
+    margin-top: 4vh;
+    @include devices(thone){
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 4vh;
+        
+    }
+    @include devices(landscape){
+        display: flex;
+        margin-top: 0;
+        margin-left: 2%;
+        width: 100%;
+        margin-top: 3vh;
+        
+    }
+    @include devices(tablet){
+        margin-top: 3vh;
+    }
+    @include devices(desktop){
+        display: block;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.mail{
+    font-size: 0.8rem;
+    color: black;
+    padding-top: 0.6vh;
+
+    @include devices(landscape){
+        font-size: 0.8rem;
+    }
+    @include devices(thone){
+        font-size: 1rem;
+        padding-top: 0;
+        padding-left: 6%;
+    }
+    @include devices(tablet){
+        font-size: 1.3rem;
+    }
+    @include devices(desktop){
+        padding-left: 0;
+    }
+}
+
+.p{
+    font-weight: lighter;
+    padding-bottom: 1vh;
+    margin-left: 6%;
+    @include devices(landscape){
+        font-size: 0.7rem;
+        padding-top: 1.1vh;
+        margin-left: 4%;
+    }
+    @include devices(thone){
+        font-size: 0.8rem;
+        padding-top: 0.3vh;
+    }
+    @include devices(surface){
+        
+        padding-top: 0.3vh;
+    }
+    @include devices(tablet){
+        font-size: 1rem;
+    }
+    @include devices(desktop){
+        padding-top: 0.7vh;
+    }
+}
+
+.mail-container{
+    width: 70%;
+    font-size: 0.8rem;
+    display: flex;
+    margin-bottom: 2vh;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.button-container{
+    justify-content: space-between;
+    margin-top: 5vh;
+    width: 100%;
+    @include devices(thone){
+        margin-top: 0;
+    }
+    @include devices(landscape){
+        margin-top: 4vh;
+    }
+    @include devices(tablet){
+        margin-top: 2vh;
+    }
+}
+.btn{
+    width: 40%;
+    height: 6vh;
+    border: none;
+    cursor: pointer;
+
+    @include devices(tiny){
+        font-size: 0.6rem;
+    }
+    @include devices(landscape){
+        font-size: 1rem;
+    }
+    @include devices(thone){
+        font-size: 1rem;
+    }
+    @include devices(tablet){
+        font-size: 1.2rem;
+    }
+}
+.button1{
+    background: black;
+    color: white;
+    margin-right: 8%;
+    box-shadow: 0 0 5px rgb(83, 83, 83);
+    
+    
+    &:hover{
+        background: white;
+        color: black; 
+        transition: background 1s;
+    }
+}
+    
+.button{ 
+    background: white;
+    color: black;
+    box-shadow: 0 0 5px rgb(83, 83, 83);
+
+    &:hover{
+        background: black;
+        color: white; 
+        transition: background 1s;
+    }
+}
+.avatar{
+    display: none;
+    // @include devices(thone){
+    //     display: block;
+    //     height: 20vh;
+    //     width: 40%;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     margin-top: -1vh;
+    // }
+    @include devices(desktop){
+        display: block;
+        width: 100%;
+    }
+
+}
+.avatar1{
+    @include devices(desktop){
+        display: block;
+        height: 70vh;
+        width: 100%;
+    }
+    @include devices(bigDesktop){
+        display: block;
+      }
+    @include devices(4k){
+        display: block;
+      }
+}
