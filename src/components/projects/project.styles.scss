@@ -54,7 +54,9 @@
     text-align: center;
     overflow-y: scroll;
     height: 68vh;
-    
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
     @include devices(phone){
         height: 67vh;
     }
@@ -85,7 +87,7 @@
       height: 80vh;
   }
     @include devices(bigDesktop){
-      width: 60%;
+      width: 50%;
       height: 80vh;
   }
 
