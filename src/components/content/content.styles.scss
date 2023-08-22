@@ -204,6 +204,7 @@
     }
     @include devices(tablet){
         font-size: 1.3rem;
+        
     }
     @include devices(desktop){
         padding-left: 0;
