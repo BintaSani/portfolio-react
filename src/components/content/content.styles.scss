@@ -178,7 +178,8 @@
     text-align: justify;
     height: 26vh;
     overflow-y: scroll;
-    @include scrollbars(.1em, slategray);
+    padding-right: 2%;
+    @include scrollbars(.2em, slategray);
 
     @include devices (tiny){
         height: 30vh;

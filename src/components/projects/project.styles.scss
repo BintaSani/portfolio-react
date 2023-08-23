@@ -84,7 +84,7 @@
     text-align: center;
     overflow-y: scroll;
     height: 68vh;
-    @include scrollbars(.1em, slategray);
+    @include scrollbars(.2em, slategray);
     
     @include devices(phone){
         height: 67vh;
@@ -140,11 +140,11 @@
   @include devices(view){
     width: 50%;
     padding-left: 5%;
-    padding-right: 0;
+    padding-right: 2%;
     padding-top: 5%;
   }
   @include devices(desktop){
-    padding-right: 0;
+    padding-right: 2%;
 
   }
 }
