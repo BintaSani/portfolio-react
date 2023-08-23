@@ -31,8 +31,8 @@ const Content = () => {
                     <h4 className='p'>behance.bintasani</h4>
                 </div>
                 </div>
-                <div className='button-container'>
-                    <button className='button1 btn' onClick={(e) => {window.open('https://drive.google.com/uc?export=download&id=16P--RTG7nqBnvXbcc4VNSIqWTPCrquhY')}}>Download CV</button>
+                <div className='button-container'> 
+                    <button className='button1 btn' onClick={(e) => {window.open('https://drive.google.com/uc?export=download&id=1LW9UoU93p5L6cedi1jTi1eda_N3I73_K')}}>Download CV</button>
                     <button className='button btn'onClick={(e) => {window.open('mailto:bintasani992@gmail.com?subject=subject&body=body')}}>Hire me</button>
                 </div>
             </div>
