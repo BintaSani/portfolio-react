@@ -1,34 +1,39 @@
 @mixin devices ($breakpoint) { //the name of the mixin is devices
   
     @if $breakpoint == tiny {    
-    @media  (min-width: 330px) {
+    @media  (min-width: 330px) and (orientation: portrait){
       @content;
     }
   }
  
   @if $breakpoint == phone {
-    @media (min-width: 390px) {
+    @media (min-width: 390px) and (orientation: portrait){
       @content;
       
     }
   }
-    @if $breakpoint == landscape {    
-    @media (min-width: 480px) {
+  
+  @if $breakpoint == phlet {    
+    @media (min-width: 480px) and (orientation: landscape) {
       @content;
     }
   }
  
   @if $breakpoint == thone {
-    @media (min-width: 600px) {
+    @media (min-width: 600px) and (orientation: landscape){
       @content;
     }
   }
     @if $breakpoint == tablet {    
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (orientation: portrait){
       @content;
     }
   }
- 
+  @if $breakpoint == view {
+    @media (min-width: 800px) and (orientation: landscape){
+      @content;
+    }
+  }
   @if $breakpoint == desktop {
     @media (min-width: 1000px) {
       @content;
@@ -49,6 +54,14 @@
 
 .home-page-container{
     padding: 10px;
+    @include devices(phlet){
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    @include devices(desktop){
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 }   
 
 .content-container{

@@ -1,30 +1,36 @@
 @mixin devices($breakpoint) { //the name of the mixin is devices
   
     @if $breakpoint == tiny {    
-    @media  (min-width: 300px) {
+    @media  (min-width: 300px) and (orientation: portrait){
       @content;
     }
   }
  
   @if $breakpoint == phone {
-    @media (min-width: 360px) {
+    @media (min-width: 360px) and (orientation: portrait){
       @content;
       
     }
   }
-    @if $breakpoint == landscape {    
-    @media (min-width: 480px) {
+
+    @if $breakpoint == phlet {    
+    @media (min-width: 480px) and (orientation: landscape) {
       @content;
     }
   }
  
   @if $breakpoint == thone {
-    @media (min-width: 600px) {
+    @media (min-width: 600px) and (orientation: landscape){
       @content;
     }
   }
     @if $breakpoint == tablet {    
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (orientation: portrait){
+      @content;
+    }
+  }
+  @if $breakpoint == view {
+    @media (min-width: 800px) and (orientation: landscape){
       @content;
     }
   }
@@ -67,14 +73,24 @@
     @include devices(phone){
         font-size: 1.5rem;
     }
-    @include devices(landscape){
-        font-size: 2rem;
+    
+    @include devices(phlet){
+        font-size: 1rem;
     }
     @include devices(thone){
-        font-size: 2rem;
+        font-size: 1rem;
     }
     @include devices(tablet){
         font-size: 2.1rem;
+    }
+    @include devices(view){
+        font-size: 1rem;
+    }
+    @include devices(desktop){
+        font-size: 1.3rem;
+    }
+    @include devices(bigDesktop){
+        font-size: 2rem;
     }
 }
 .contact-text{
@@ -85,14 +101,23 @@
     @include devices(phone){
         font-size: 1rem;
     }
-    @include devices(landscape){
-        font-size: 1.1rem;
+    @include devices(phlet){
+        font-size: 0.6rem;
     }
     @include devices(thone){
-        font-size: 1.5rem;
+        font-size: 0.8rem;
     }
     @include devices(tablet){
         font-size: 1.6rem;
+    }
+    @include devices(view){
+        font-size: 0.8rem;
+    }
+    @include devices(desktop){
+        font-size: 1rem;
+    }
+    @include devices(bigDesktop){
+        font-size: 1.3rem;
     }
 }
 .contact{
@@ -113,23 +138,30 @@
         font-size: 0.7rem;
         font-weight: lighter;
     }
-    @include devices(landscape){
-        font-size: 1rem;
+    @include devices(phlet){
+        font-size: 0.6rem;
         font-weight: lighter;
+        width: 30%;
     }
     @include devices(thone){
-        font-size: medium;
-        font-weight: bold;
+        font-size: 0.8rem;
+        font-weight: lighter;
     }
     @include devices(tablet){
         font-size: 1.5rem;
         font-weight: lighter;
     }
+    @include devices(view){
+      width: 30%;
+      font-size: 0.7rem;
+    }
     @include devices(desktop){
-      width: 40%;
+      width: 30%;
+      font-size: 0.8rem;
     }
     @include devices(bigDesktop){
-      width: 40%;
+      width: 30%;
+      font-size: 1rem;
     }
     @include devices(giant){
       width: 30%;

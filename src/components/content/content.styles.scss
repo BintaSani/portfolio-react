@@ -2,35 +2,41 @@
 @mixin devices($breakpoint) { //the name of the mixin is devices
   
     @if $breakpoint == tiny {    
-    @media  (min-width: 320px) {
+    @media  (min-width: 320px) and (orientation: portrait){
       @content;
     }
   }
  
   @if $breakpoint == phone {
-    @media (min-width: 360px) {
+    @media (min-width: 360px) and (orientation: portrait){
       @content;
       
     }
   }
-    @if $breakpoint == landscape {    
-    @media (min-width: 480px) {
+  
+    @if $breakpoint == phlet {    
+    @media (min-width: 480px) and (orientation: landscape) {
       @content;
     }
   }
     @if $breakpoint == surface {    
-    @media (min-width: 540px) {
+    @media (min-width: 540px) and (orientation: portrait){
       @content;
     }
   }
  
   @if $breakpoint == thone {
-    @media (min-width: 600px) {
+    @media (min-width: 600px) and (orientation: landscape){
       @content;
     }
   }
     @if $breakpoint == tablet {    
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (orientation: portrait){
+      @content;
+    }
+  }
+  @if $breakpoint == view {
+    @media (min-width: 800px) and (orientation: landscape){
       @content;
     }
   }
@@ -64,6 +70,9 @@
     left: 12.5%;
     text-align: center;
 
+    @include devices(view){
+        display: flex;
+    }
     @include devices(desktop){
         display: flex;
     }
@@ -73,6 +82,9 @@
     
 }
 .content{
+    @include devices(view){
+        width: 90%;
+    }
     @include devices(desktop){
         width: 90%;
     }
@@ -88,14 +100,17 @@
     @include devices(phone){
         font-size: 1.5rem;
     }
-    @include devices(landscape){
-        font-size: 2rem;
+    @include devices(phlet){
+        font-size: 1rem;
     }
     @include devices(thone){
-        font-size: 2rem;
+        font-size: 1rem;
     }
     @include devices(tablet){
         font-size: 2.1rem;
+    }
+    @include devices(view){
+        font-size: 1rem;
     }
     @include devices(desktop){
         font-size: 2rem;
@@ -116,14 +131,17 @@
     @include devices(phone){
         font-size: 1.1rem;
     }
-    @include devices(landscape){
-        font-size: 1.5rem;
+    @include devices(phlet){
+        font-size: 0.8rem;
     }
     @include devices(thone){
-        font-size: 1.8rem;
+        font-size: 0.8rem;
     }
     @include devices(tablet){
         font-size: 1.9rem;
+    }
+    @include devices(view){
+        font-size: 0.9rem;
     }
     @include devices(desktop){
         font-size: 1.7rem;
@@ -144,18 +162,23 @@
         height: 30vh;
         font-size: 1rem;
     }
-    @include devices(landscape){
-        font-size: 1rem;
+    @include devices(phlet){
+        font-size: 0.6rem;
         height: 30vh;
     }
     @include devices(thone){
-        font-size: 1.5rem;
-        height: 33vh;
+        font-size: 0.7rem;
+        height: 30vh;
         margin-bottom: 2vh;
     }
     @include devices(tablet){
         margin-top: 4vh;
         font-size: 1.7rem;
+        
+    }
+    @include devices(view){
+        margin-top: 3vh;
+        font-size: 0.7rem;
         
     }
     @include devices(desktop){
@@ -171,10 +194,10 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        margin-top: 4vh;
+        margin-top: 3vh;
         
     }
-    @include devices(landscape){
+    @include devices(phlet){
         display: flex;
         margin-top: 0;
         margin-left: 2%;
@@ -182,13 +205,31 @@
         margin-top: 3vh;
         
     }
+    @include devices(surface){
+        display: flex;
+        margin-left: 5%;
+    }
     @include devices(tablet){
-        margin-top: 3vh;
+        margin-top: 5vh;
+        display: flex;
+        margin-left: 5%;
+    }
+    @include devices(view){
+        margin-top: 4vh;
+        margin-left: 0;
     }
     @include devices(desktop){
-        display: block;
+        display: flex;
         margin-left: 0;
-        margin-top: 0;
+        margin-top: 4vh;
+    }
+    @include devices(bigDesktop){
+        display: flex;
+        margin-left: 5%;
+        margin-top: 4vh;
+    }
+    @include devices(giant){
+        margin-top: 5vh;
     }
 }
 .mail{
@@ -196,20 +237,32 @@
     color: black;
     padding-top: 0.6vh;
 
-    @include devices(landscape){
+    @include devices(phlet){
         font-size: 0.8rem;
     }
     @include devices(thone){
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding-top: 0;
-        padding-left: 6%;
+        padding-left: 8%;
     }
+    
     @include devices(tablet){
         font-size: 1.3rem;
         
     }
-    @include devices(desktop){
+    @include devices(view){
+        font-size: 0.7rem;
         padding-left: 0;
+    }
+    @include devices(desktop){
+        padding-left: 6%;
+        font-size: 0.8rem;
+    }
+    @include devices(bigDesktop){
+        font-size: 0.9rem;
+    }
+    @include devices(giant){
+        font-size: 1rem;
     }
 }
 
@@ -217,24 +270,40 @@
     font-weight: lighter;
     padding-bottom: 1vh;
     margin-left: 6%;
-    @include devices(landscape){
+    @include devices(phone){
+        padding-top: 0.6vh;
+        margin-left: 4%;
+    }
+    @include devices(phlet){
         font-size: 0.7rem;
-        padding-top: 1.1vh;
+        padding-top: 1vh;
         margin-left: 4%;
     }
     @include devices(thone){
         font-size: 0.8rem;
-        padding-top: 0.3vh;
+        padding-top: 0.8vh;
     }
     @include devices(surface){
         
-        padding-top: 0.3vh;
+        padding-top: 0.5vh;
+        margin-left: 3%;
     }
     @include devices(tablet){
         font-size: 1rem;
+        padding-top: 0.8vh;
+    }
+    @include devices(view){
+        font-size: 0.6rem;
     }
     @include devices(desktop){
-        padding-top: 0.7vh;
+        padding-top: 0.1vh;
+        font-size: 0.7rem;
+    }
+    @include devices(bigDesktop){
+        font-size: 0.8rem;
+    }
+    @include devices(giant){
+        font-size: 0.9rem;
     }
 }
 
@@ -255,8 +324,8 @@
     @include devices(thone){
         margin-top: 0;
     }
-    @include devices(landscape){
-        margin-top: 4vh;
+    @include devices(phlet){
+        margin-top: 3vh;
     }
     @include devices(tablet){
         margin-top: 2vh;
@@ -271,14 +340,23 @@
     @include devices(tiny){
         font-size: 0.6rem;
     }
-    @include devices(landscape){
-        font-size: 1rem;
+    @include devices(phlet){
+        font-size: 0.6rem;
     }
     @include devices(thone){
-        font-size: 1rem;
+        font-size: 0,7rem;
     }
     @include devices(tablet){
         font-size: 1.2rem;
+    }
+    @include devices(view){
+        font-size: 0.6rem;
+    }
+    @include devices(desktop){
+        font-size: 0.8rem;
+    }
+    @include devices(bigDesktop){
+        font-size: 0.9rem;
     }
 }
 .button1{
@@ -316,6 +394,10 @@
     //     margin-right: auto;
     //     margin-top: -1vh;
     // }
+    @include devices(view){
+        display: block;
+        width: 100%;
+    }
     @include devices(desktop){
         display: block;
         width: 100%;
@@ -323,6 +405,11 @@
 
 }
 .avatar1{
+    @include devices(view){
+        display: block;
+        height: 70vh;
+        width: 100%;
+    }
     @include devices(desktop){
         display: block;
         height: 70vh;
