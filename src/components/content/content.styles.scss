@@ -63,6 +63,31 @@
   }
 }
 
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+  
+    // For Internet Explorer
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+
+
+
 .container {
     width: 75%;
     position: absolute;
@@ -153,6 +178,7 @@
     text-align: justify;
     height: 26vh;
     overflow-y: scroll;
+    @include scrollbars(.1em, slategray);
 
     @include devices (tiny){
         height: 30vh;
