@@ -362,6 +362,7 @@
     width: 40%;
     height: 6vh;
     border: none;
+    box-shadow: 0 0 5px #ffffff50;
     cursor: pointer;
 
     @include devices(tiny){
@@ -390,7 +391,7 @@
     background: black;
     color: white;
     margin-right: 8%;
-    box-shadow: 0 0 5px rgb(83, 83, 83);
+    
     
     
     &:hover{
@@ -403,7 +404,7 @@
 .button{ 
     background: white;
     color: black;
-    box-shadow: 0 0 5px rgb(83, 83, 83);
+    
 
     &:hover{
         background: black;
