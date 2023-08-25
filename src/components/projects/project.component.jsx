@@ -55,7 +55,7 @@ const Project= () => {
                         <li></li>
                     </ul>
                     
-                    <button className='view v1' onClick={(e) => {window.open('https://crownstores.netlify.app/')}}>View</button>
+                    <button className='view' onClick={(e) => {window.open('https://crownstores.netlify.app/')}}>View</button>
                 </div>
             </div>
             <div className='image-container3 cont'>
