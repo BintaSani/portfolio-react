@@ -55,26 +55,10 @@ const Project= () => {
                         <li></li>
                     </ul>
                     
-                    <button className='view' onClick={(e) => {window.open('https://crownstores.netlify.app/')}}>View</button>
+                    <button className='view v1' onClick={(e) => {window.open('https://crownstores.netlify.app/')}}>View</button>
                 </div>
             </div>
-            <div className='image-container3 cont'>
-                <img src='https://i.ibb.co/n64mbjP/auth.png' alt='auth' className='image'/>
-                <div className='props'>
-                    <h3 className='title'>Authentication</h3>
-                    <p className='description'> Authentication is a simple sign up and sign in page that provides ease in the process of creating and accessing an account as well as resetting the account's password in case.</p>
-                    <h3 className='title'>Technologies</h3>
-                    
-                    <ul>
-                        <li>Html</li>
-                        <li>Css</li>
-                        <li>Javascript</li>
-                        <li>Firebase</li>
-                    </ul>
-                    
-                    <button className='view v1' onClick={(e) => {window.open('https://bintasani.github.io/authentication/authentication.html')}}>View</button>
-                </div>
-            </div>
+            
         </div>
 
     )
