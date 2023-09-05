@@ -70,14 +70,14 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 1rem;
-    background-color: #80808099;
+    background-color: #8cb4fc80;
 
 
     border: none;
     padding-left: 1vh;
     box-shadow: 0 0 5px #00000050;
     @include devices(tiny){
-      background-color: #80808059;
+      background-color: #8cb4fc59;
     }
 
 }
