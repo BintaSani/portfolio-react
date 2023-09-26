@@ -62,7 +62,7 @@ const Project= () => {
                 <img src='https://i.ibb.co/ZWnyGTN/20230926-095857.jpg' alt='weather app' className='image'/>
                 <div className='props'>
                     <h3 className='title'>Image Gallery</h3>
-                    <p className='description'>Image gallery is a simple image gallery that can be rearranged by dragging and dropping images in a desired position, images can also be filtered bay tags. sign in credentials are: email- user@example.com, password: 1Password. </p>
+                    <p className='description'>Image gallery is a simple image gallery that can be rearranged by dragging and dropping images in a desired position, images can also be filtered bay tags. sign in credentials are:<br/> email: user@example.com <br/> password: 1Password </p>
                     <h3 className='title'>Technologies</h3>
                     
                     <ul>
