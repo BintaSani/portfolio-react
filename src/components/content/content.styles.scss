@@ -193,16 +193,22 @@
         font-size: 0.6rem;
         height: 30vh;
     }
+    @include devices(surface){
+        overflow-y: hidden;
+        
+    }
     @include devices(thone){
         font-size: 0.7rem;
         height: 30vh;
         margin-bottom: 2vh;
+        overflow-y: scroll;
     }
     @include devices(tablet){
         margin-top: 4vh;
         font-size: 1.7rem;
-        
+        overflow-y: scroll;
     }
+    
     @include devices(view){
         margin-top: 3vh;
         font-size: 0.7rem;
@@ -211,7 +217,7 @@
     @include devices(desktop){
         font-size: 1.3rem;
         height: 25vh;
-
+        
     }
 }
 .container-m{

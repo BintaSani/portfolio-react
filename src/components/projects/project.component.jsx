@@ -58,6 +58,43 @@ const Project= () => {
                     <button className='view v1' onClick={(e) => {window.open('https://crownstores.netlify.app/')}}>View</button>
                 </div>
             </div>
+            <div className='image-container3 cont'>
+                <img src='https://i.ibb.co/ZWnyGTN/20230926-095857.jpg' alt='weather app' className='image'/>
+                <div className='props'>
+                    <h3 className='title'>Image Gallery</h3>
+                    <p className='description'>Image gallery is a simple image gallery that can be rearranged by dragging and dropping images in a desired position, images can also be filtered bay tags. sign in credentials are: email- user@example.com, password: 1Password. </p>
+                    <h3 className='title'>Technologies</h3>
+                    
+                    <ul>
+                        <li>React.js</li>
+                        <li>Scss</li>
+                        <li>Npm Packages</li>
+                        <li>Firebase</li>
+                        <li>DnD kit</li>
+                        
+                    </ul>
+                    
+                    <button className='view v1' onClick={(e) => {window.open('https://hng-task3.netlify.app/')}}>View</button>
+                </div>
+            </div>
+            <div className='image-container4 cont'>
+                <img src='https://i.ibb.co/k9frTwf/20230926-095839.jpg' alt='weather app' className='image'/>
+                <div className='props'>
+                    <h3 className='title'>Movie Box</h3>
+                    <p className='description'>Movie box is a simple movie site that showcases the top ten movies</p>
+                    <h3 className='title'>Technologies</h3>
+                    
+                    <ul>
+                        <li>React.js</li>
+                        <li>Scss</li>
+                        <li>Npm Packages</li>
+                        <li>TMDB api</li>
+                        
+                    </ul>
+                    
+                    <button className='view v1' onClick={(e) => {window.open('https://moviesitetask.netlify.app/')}}>View</button>
+                </div>
+            </div>
             
         </div>
 

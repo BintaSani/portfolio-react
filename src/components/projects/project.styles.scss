@@ -109,6 +109,18 @@
     margin-bottom: 8vh;
   }
 }
+.image-container2{
+  @include devices(view){
+  
+    margin-bottom: 8vh;
+  }
+}
+.image-container3{
+  @include devices(view){
+  
+    margin-bottom: 8vh;
+  }
+}
 
 .image{
     border: 4px solid black;
