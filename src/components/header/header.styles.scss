@@ -67,7 +67,6 @@
     padding-top: 1.5vh;
     text-align: center;
     justify-items: space-between;
-
     @include devices(tiny){
         font-size: 0.8rem;
         
@@ -118,26 +117,26 @@
       width: 30%;
       font-size: 1.3
     }
+    .links{
+      text-decoration: none;
+      margin-right: 4%;
+      
+      cursor: pointer;
+      &.color{
+        color: white;
+      }
+      &.disable{
+          color: grey;
+      }
+      @include devices(phlet){
+          margin-right: 6%;
+      }
+  }    
+  
+  .l3 {
+      margin-right: 0;
+      
+  }
 
-}
-
-.links{
-    text-decoration: none;
-    margin-right: 4%;
-    cursor: pointer;
-    &.color{
-      color: white;
-    }
-    &.disable{
-        color: grey;
-    }
-    @include devices(phlet){
-        margin-right: 6%;
-    }
-}    
-
-.l3 {
-    margin-right: 0;
-    
 }
 

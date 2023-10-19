@@ -84,6 +84,7 @@
     text-align: center;
     overflow-y: scroll;
     height: 68vh;
+    animation: myAnim 5s ease 0s 1 normal forwards;
     @include scrollbars(.2em, slategray);
     
     @include devices(phone){
@@ -285,4 +286,14 @@ ul{
         
     }
     
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale(0.7);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }

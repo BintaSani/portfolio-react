@@ -9,16 +9,13 @@ const Content = () => {
                 <h1 className='introduction'>Hi! </h1>
                 <h1 className='introduction'>I am Binta Sani </h1>
                 <h2 className='developer'>Web Developer</h2>
-                <p className='dev'>I am a Web Developer who uses HTML,
+                <p className='dev'>I am a front-end developer who uses HTML,
                     CSS, vanilla Javascript and React.JS to design responsive
                     web pages and applications.
                     I also enjoy playing around with Adobe XD and Adobe photoshop.
                     <br/>
                     <br/>
-                    Interestingly, I got introduced to programming after my 
-                    graduation from the university, After which i dedicated my
-                    time to learning frontend web development in order to become
-                    a software developer with a goal-driven creative mindset and 
+                    I am a goal-driven individual with a creative mindset and 
                     passion for learning and innovating. I also love baking and Photography.
                 </p>
                 <div className='container-m'>

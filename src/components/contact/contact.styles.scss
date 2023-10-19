@@ -60,7 +60,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-
+    animation: myAnim 5s ease 0s 1 normal forwards;
 }
 .contact-title{
     font-size: 1.5rem;
@@ -156,7 +156,7 @@
       font-size: 0.7rem;
     }
     @include devices(desktop){
-      width: 30%;
+      width: 20%;
       font-size: 0.8rem;
     }
     @include devices(bigDesktop){
@@ -172,4 +172,12 @@
         transition: background 1s;
     }
 }
+@keyframes myAnim {
+	0% {
+		transform: scale(0.7);
+	}
 
+	100% {
+		transform: scale(1);
+	}
+}

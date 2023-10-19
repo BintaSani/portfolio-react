@@ -94,7 +94,7 @@
     top: 16vh;
     left: 12.5%;
     text-align: center;
-
+    animation: myAnim 5s ease 0s 1 normal forwards;
     @include devices(view){
         display: flex;
     }
@@ -212,12 +212,12 @@
     @include devices(view){
         margin-top: 3vh;
         font-size: 0.7rem;
-        
+        overflow-y: hidden;
     }
     @include devices(desktop){
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         height: 25vh;
-        
+        overflow-y: hidden;
     }
 }
 .container-m{
@@ -439,6 +439,7 @@
 
 }
 .avatar1{
+    
     @include devices(view){
         display: block;
         height: 70vh;
@@ -456,3 +457,13 @@
         display: block;
       }
 }
+@keyframes myAnim {
+	0% {
+		transform: scale(0.7);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
