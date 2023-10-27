@@ -29,7 +29,7 @@ const Content = () => {
                 </div>
                 </div>
                 <div className='button-container'> 
-                    <button className='button1 btn' onClick={(e) => {window.open('https://drive.google.com/uc?export=download&id=1LW9UoU93p5L6cedi1jTi1eda_N3I73_K')}}>Download CV</button>
+                    <button className='button1 btn' onClick={(e) => {window.open('https://drive.google.com/uc?export=download&id=1wpEzTPZd6hNK2iKhlT-Gj9V1tNcCjTai')}}>Download CV</button>
                     <button className='button btn'onClick={(e) => {window.open('mailto:bintasani992@gmail.com?subject=subject&body=body')}}>Hire me</button>
                 </div>
             </div>
