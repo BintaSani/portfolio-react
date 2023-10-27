@@ -60,7 +60,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    animation: myAnim 5s ease 0s 1 normal forwards;
 }
 .contact-title{
     font-size: 1.5rem;
@@ -172,12 +171,4 @@
         transition: background 1s;
     }
 }
-@keyframes myAnim {
-	0% {
-		transform: scale(0.7);
-	}
 
-	100% {
-		transform: scale(1);
-	}
-}
