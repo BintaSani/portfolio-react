@@ -46,7 +46,7 @@ const Project= () => {
                 <img src='https://i.ibb.co/ZWnyGTN/20230926-095857.jpg' alt='weather app' className='image'/>
                 <div className='props'>
                     <h3 className='title'>Image Gallery</h3>
-                    <p className='description'>Image Gallery is a user-friendly image gallery website developed with React.js, allowing easy sign-in using Firebase. Images can be rearranged simply by dragging and dropping images in the desired position, thanks to DND Kit integration.<br/> sign in credentials are:<br/> email: user@example.com <br/> password: 1Password </p>
+                    <p className='description'>Image Gallery is a user-friendly image gallery website developed with React.js, allowing easy sign-in using Firebase. Images can be rearranged simply by dragging and dropping images in the desired position, thanks to DND Kit integration.</p>
                     <h3 className='title'>Technologies</h3>
                     
                     <ul>
